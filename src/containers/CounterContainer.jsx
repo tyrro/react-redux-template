@@ -1,9 +1,9 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
-import { incrementCounter, decrementCounter } from "../actions/counter";
+import { incrementCounter, decrementCounter } from '../actions/counter';
 
-const Counter = (props) => {
+const Counter = props => {
   const { count, incrementCounter, decrementCounter } = { ...props };
   return (
     <>
@@ -14,11 +14,11 @@ const Counter = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   count: state.counter.count,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   incrementCounter: () => dispatch(incrementCounter()),
   decrementCounter: () => dispatch(decrementCounter()),
 });

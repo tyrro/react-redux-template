@@ -1,4 +1,4 @@
-import { COUNTER_INCREMENTED, COUNTER_DECREMENTED } from "../actions/counter";
+import { COUNTER_INCREMENTED, COUNTER_DECREMENTED } from '../actions/counter';
 
 export const counter = (state = { count: 0 }, action) => {
   switch (action.type) {

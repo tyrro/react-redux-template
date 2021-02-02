@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from './logo.svg';
+import './App.css';
 
-import Counter from "./containers/CounterContainer";
+import Counter from './containers/CounterContainer';
 
 function App() {
   return (

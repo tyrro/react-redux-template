@@ -14,15 +14,20 @@
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10"
+    "enzyme": "^3.11.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "TZ=UTC jest",
+    "test:watch": "TZ=UTC jest --watch",
+    "test:ci": "yarn test --ci --testResultsProcessor jest-junit --runInBand",
+    "lint": "eslint --ext .js,.jsx src",
+    "fix:lint": "eslint --ext .js,.jsx src --fix",
+    "fix:prettier": "prettier --write \"src/**/*.*\""
   },
   "eslintConfig": {
     "extends": [
