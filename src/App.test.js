@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
+import { shallow } from 'enzyme';
+import logo from './logo.svg';
+
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  const wrapper = shallow(<App />);
+
+  test('renders react logo', () => {
+    expect(wrapper.find('img').prop('src')).toEqual(logo);
+  });
+
+  test('renders learn react link', () => {
+    expect(wrapper.find('a.App-link').text()).toEqual('Learn React');
+  });
 });
