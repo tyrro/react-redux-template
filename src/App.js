@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.scss';
+import './stylesheets/index.scss';
 
 import Counter from './containers/CounterContainer';
 
