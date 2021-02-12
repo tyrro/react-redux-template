@@ -1,10 +1,10 @@
 import { shallow } from 'enzyme';
 import logo from '../logo.svg';
 
-import App from './App';
+import Counter from './Counter';
 
-describe('App', () => {
-  const wrapper = shallow(<App />);
+describe('Counter', () => {
+  const wrapper = shallow(<Counter />);
 
   test('renders react logo', () => {
     expect(wrapper.find('img').prop('src')).toEqual(logo);

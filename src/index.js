@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './components/App';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import Counter from './components/Counter';
+import PageNotFound from './components/PageNotFound';
+
 import reportWebVitals from './reportWebVitals';
 import store from './store';
 
@@ -10,7 +13,16 @@ import './stylesheets/index.scss';
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <Router>
+        <Switch>
+          <Route exact path={'/'}>
+            <Counter />
+          </Route>
+          <Route exact path="*">
+            <PageNotFound />
+          </Route>
+        </Switch>
+      </Router>
     </React.StrictMode>
   </Provider>,
   document.getElementById('root'),
