@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 
 import App from './App';
 
