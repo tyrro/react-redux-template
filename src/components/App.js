@@ -1,7 +1,5 @@
-import logo from '../logo.svg';
-import '../stylesheets/index.scss';
-
 import Counter from './Counter';
+import logo from '../logo.svg';
 
 function App() {
   return (
